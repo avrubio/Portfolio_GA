@@ -6,17 +6,20 @@
 }
 
 :root {
-  --main: #00f6fa;
-  --shade-1: #00dde1;
+  --main: rgba(252, 176, 69, 1);
+  --shade-1: rgba(56, 251, 255, 0.8729866946778712);
   --main-text: black;
-  --sec-text: #6e6e6e;
+  --sec-text: #3e3e3e;
 }
 nav {
   /* display: inline-block; */
   text-align: right;
 
   padding: 20px 20px;
-  margin: 20px 20px;
+  margin: 50px 50px;
+  /* margin-left: 60px; */
+  margin-left: 100px;
+  margin-right: 100px;
 }
 .navbar {
   color: var(--main);
@@ -24,12 +27,25 @@ nav {
 a {
   color: black;
 }
-a:hover {
-  color: var(--shade-1);
-}
+/* a:hover {
+  color: var(--main);
+} */
 
 body {
-  background-color: white;
+  /* background-color: white; */
+  /* background: rgb(234, 174, 238);
+  background: radial-gradient(
+    circle,
+    rgba(234, 174, 238, 1) 30%,
+    rgba(56, 251, 255, 0.8729866946778712) 100%
+  ); */
+  background: rgb(58, 180, 169);
+  background: linear-gradient(
+    29deg,
+    rgba(58, 180, 169, 1) 0%,
+    rgba(177, 29, 253, 1) 46%,
+    rgba(252, 176, 69, 1) 100%
+  );
   margin: 0 auto;
 }
 
@@ -38,6 +54,16 @@ body {
   text-decoration: none;
   margin-left: 10px;
 }
+
+/* nav > a:hover:nth-child(2) {
+  color: rgba(177, 29, 253, 1) 46%;
+} */
+.nav-name:hover {
+  color: var(--main);
+}
+.nav-link:hover {
+  color: #b11dfd; /* Change the text color on hover */
+}
 .nav-name {
   float: left;
   text-decoration: none;
@@ -45,50 +71,58 @@ body {
 
 main {
   display: grid;
-  grid-template-rows: 100px 100px 100px;
+  grid-template-rows: 200px 200px 200px;
   grid-template-columns: 2fr 2fr;
   margin-top: 20px;
-  margin-left: 400px;
-  margin-right: 400px;
-}
-
-img {
-  border-radius: 10px;
+  margin-left: 500px;
+  margin-right: 500px;
+  /* border: 2px solid red; */
 }
 
 .main-heading {
-  font-size: 40px;
+  font-size: 60px;
+  /* border: 2px solid red; */
+  margin-top: 90px;
 }
 .main-subheading {
   font-size: 20px;
   color: var(--sec-text);
+  /* border: 2px solid red; */
 }
 
 .main-p {
   grid-row: 3;
+  margin-top: -60px;
   grid-column: 1;
-  margin-right: 200px;
+  /* margin-right: 0px; */
+  /* border: 2px solid red; */
 }
 .main-img {
-  grid-row: 1;
+  grid-row: 2;
   grid-column: 3 / span 1;
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+  /* border: red solid 2px; */
+  margin-top: -90px;
 }
 
 .main-btns {
   grid-row: 3;
   grid-column: 1;
-  margin-top: 60px;
+  padding-top: 90px;
 }
 
 button {
   width: 100px;
   height: 30px;
   border: none;
-  background-color: var(--shade-1);
+  background-color: var(--main);
+  border-radius: 5px;
 }
 
 button:hover {
-  background-color: #444;
+  background-color: var(--shade-1);
 }
 
 section {
@@ -96,6 +130,7 @@ section {
   display: grid;
   grid-template-rows: 100px 100px 100px;
   grid-template-columns: 1fr;
+  margin-top: 60px;
 }
 
 .about-p {
