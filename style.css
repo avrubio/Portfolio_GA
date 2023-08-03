@@ -1,13 +1,103 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&display=swap");
 * {
   margin: 0;
   padding: 0;
+  font-family: "Roboto Condensed", sans-serif;
 }
 
+:root {
+  --main: #00f6fa;
+  --shade-1: #00dde1;
+  --main-text: black;
+  --sec-text: #6e6e6e;
+}
 nav {
   /* display: inline-block; */
   text-align: right;
+
+  padding: 20px 20px;
+  margin: 20px 20px;
+}
+.navbar {
+  color: var(--main);
+}
+a {
+  color: black;
+}
+a:hover {
+  color: var(--shade-1);
+}
+
+body {
+  background-color: white;
+  margin: 0 auto;
 }
 
 .nav-link {
   justify-items: right;
+  text-decoration: none;
+  margin-left: 10px;
+}
+.nav-name {
+  float: left;
+  text-decoration: none;
+}
+
+main {
+  display: grid;
+  grid-template-rows: 100px 100px 100px;
+  grid-template-columns: 2fr 2fr;
+  margin-top: 20px;
+  margin-left: 400px;
+  margin-right: 400px;
+}
+
+img {
+  border-radius: 10px;
+}
+
+.main-heading {
+  font-size: 40px;
+}
+.main-subheading {
+  font-size: 20px;
+  color: var(--sec-text);
+}
+
+.main-p {
+  grid-row: 3;
+  grid-column: 1;
+  margin-right: 200px;
+}
+.main-img {
+  grid-row: 1;
+  grid-column: 3 / span 1;
+}
+
+.main-btns {
+  grid-row: 3;
+  grid-column: 1;
+  margin-top: 60px;
+}
+
+button {
+  width: 100px;
+  height: 30px;
+  border: none;
+  background-color: var(--shade-1);
+}
+
+button:hover {
+  background-color: #444;
+}
+
+section {
+  text-align: center;
+  display: grid;
+  grid-template-rows: 100px 100px 100px;
+  grid-template-columns: 1fr;
+}
+
+.about-p {
+  margin: 0 auto;
 }
